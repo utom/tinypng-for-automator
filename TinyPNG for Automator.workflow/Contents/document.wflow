@@ -59,9 +59,9 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>COMMAND_STRING</key>
-					<string>Configs=~/Library/Caches/TinyPNG
-if [ -f $Configs ]; then
-    APIKEY=$(&lt;$Configs)
+					<string>CONFIG=~/Library/Caches/TinyPNG
+if [ -f $CONFIG ]; then
+    APIKEY=$(&lt;$CONFIG)
 else
     APIKEY="$(osascript -e 'Tell application "System Events" to display dialog "Enter a TinyPNG api key:" default answer ""' -e 'text returned of result' 2&gt;/dev/null)"
     if [ $? -ne 0 ]; then
@@ -72,7 +72,7 @@ else
         osascript -e 'Tell application "System Events" to display alert "You must enter a TinyPNG api key; cancelling..." as warning'
         exit 1 # exit with an error status
     fi
-    echo "$APIKEY" &gt; $Configs
+    echo "$APIKEY" &gt; $CONFIG
 fi
 
 for f in "$@"
@@ -214,12 +214,10 @@ osascript -e 'display notification "Compress complete!" with title "TinyPNG"'</s
 						<string>4</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>601.500000:768.000000</string>
+				<string>465.500000:637.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>

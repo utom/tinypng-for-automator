@@ -8,7 +8,7 @@
 			<key>NSMenuItem</key>
 			<dict>
 				<key>default</key>
-				<string>TinyPNG</string>
+				<string>TinyPNG for Automator</string>
 			</dict>
 			<key>NSMessage</key>
 			<string>runWorkflowAsService</string>
